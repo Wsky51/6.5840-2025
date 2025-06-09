@@ -15,11 +15,24 @@ import "strconv"
 //
 
 type ExampleArgs struct {
-	X int
+    X int
 }
 
 type ExampleReply struct {
-	Y int
+    Y int
+}
+
+type TaskReqArgs struct {
+    DoneTaskId int // 已完成任务的id
+    DoneTaskType int // 已完成任务的类型
+    IntermediateFiles []string //生成的中间文件(Map任务完成时需要)
+}
+
+type Task struct {
+    FileName []string // 文件名
+    TaskId int // 任务ID
+    TaskType int // 任务类型 1:map, 2:reduce, 3:heartbeat
+    NReduce int // reduce个数
 }
 
 // Add your RPC definitions here.
@@ -30,7 +43,7 @@ type ExampleReply struct {
 // Can't use the current directory since
 // Athena AFS doesn't support UNIX-domain sockets.
 func coordinatorSock() string {
-	s := "/var/tmp/5840-mr-"
-	s += strconv.Itoa(os.Getuid())
-	return s
+    s := "/var/tmp/5840-mr-"
+    s += strconv.Itoa(os.Getuid())
+    return s
 }
