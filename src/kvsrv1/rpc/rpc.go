@@ -22,6 +22,8 @@ type PutArgs struct {
 	Key     string
 	Value   string
 	Version Tversion
+	ClientId int64
+    Ack bool
 }
 
 type PutReply struct {

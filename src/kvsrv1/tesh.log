@@ -1,0 +1,1910 @@
+test loop (1)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  8.2s #peers 1 #RPCs 93697 #Ops 93697
+--- PASS: TestPutConcurrentReliable (8.20s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  7.0s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (12.10s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  7.4s #peers 1 #RPCs   260 #Ops  221
+--- PASS: TestUnreliableNet (7.40s)
+PASS
+ok  	6.5840/kvsrv1	27.722s
+test loop (2)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  8.2s #peers 1 #RPCs 94221 #Ops 94221
+--- PASS: TestPutConcurrentReliable (8.23s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  7.1s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (12.16s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  9.2s #peers 1 #RPCs   280 #Ops  225
+--- PASS: TestUnreliableNet (9.23s)
+PASS
+ok  	6.5840/kvsrv1	29.628s
+test loop (3)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  5.6s #peers 1 #RPCs 92681 #Ops 92681
+--- PASS: TestPutConcurrentReliable (5.64s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.9s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (12.03s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time 10.3s #peers 1 #RPCs   292 #Ops  228
+--- PASS: TestUnreliableNet (10.29s)
+PASS
+ok  	6.5840/kvsrv1	27.976s
+test loop (4)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  4.2s #peers 1 #RPCs 94795 #Ops 94795
+--- PASS: TestPutConcurrentReliable (4.16s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.9s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (11.94s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  9.6s #peers 1 #RPCs   294 #Ops  236
+--- PASS: TestUnreliableNet (9.59s)
+PASS
+ok  	6.5840/kvsrv1	25.705s
+test loop (5)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  7.6s #peers 1 #RPCs 94773 #Ops 94773
+--- PASS: TestPutConcurrentReliable (7.62s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  7.1s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (12.40s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  6.4s #peers 1 #RPCs   244 #Ops  211
+--- PASS: TestUnreliableNet (6.41s)
+PASS
+ok  	6.5840/kvsrv1	26.446s
+test loop (6)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  7.8s #peers 1 #RPCs 90731 #Ops 90731
+--- PASS: TestPutConcurrentReliable (7.84s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  7.0s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (12.24s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  8.0s #peers 1 #RPCs   263 #Ops  219
+--- PASS: TestUnreliableNet (7.97s)
+PASS
+ok  	6.5840/kvsrv1	28.070s
+test loop (7)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  8.2s #peers 1 #RPCs 94245 #Ops 94245
+--- PASS: TestPutConcurrentReliable (8.24s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  7.0s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (12.12s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  9.9s #peers 1 #RPCs   289 #Ops  229
+--- PASS: TestUnreliableNet (9.93s)
+PASS
+ok  	6.5840/kvsrv1	30.316s
+test loop (8)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+info: linearizability check timed out, assuming history is ok
+  ... Passed --  time 11.0s #peers 1 #RPCs 92495 #Ops 92495
+--- PASS: TestPutConcurrentReliable (11.05s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  7.0s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (12.23s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  7.6s #peers 1 #RPCs   258 #Ops  217
+--- PASS: TestUnreliableNet (7.61s)
+PASS
+ok  	6.5840/kvsrv1	30.908s
+test loop (9)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  8.6s #peers 1 #RPCs 93129 #Ops 93129
+--- PASS: TestPutConcurrentReliable (8.63s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.9s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (11.90s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time 11.3s #peers 1 #RPCs   302 #Ops  230
+--- PASS: TestUnreliableNet (11.33s)
+PASS
+ok  	6.5840/kvsrv1	31.877s
+test loop (10)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+info: linearizability check timed out, assuming history is ok
+  ... Passed --  time 11.1s #peers 1 #RPCs 94829 #Ops 94829
+--- PASS: TestPutConcurrentReliable (11.05s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.9s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (11.89s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  9.6s #peers 1 #RPCs   278 #Ops  219
+--- PASS: TestUnreliableNet (9.61s)
+PASS
+ok  	6.5840/kvsrv1	32.558s
+test loop (11)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  4.5s #peers 1 #RPCs 84345 #Ops 84345
+--- PASS: TestPutConcurrentReliable (4.47s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.9s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (12.09s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  9.7s #peers 1 #RPCs   287 #Ops  230
+--- PASS: TestUnreliableNet (9.66s)
+PASS
+ok  	6.5840/kvsrv1	26.236s
+test loop (12)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  5.5s #peers 1 #RPCs 93127 #Ops 93127
+--- PASS: TestPutConcurrentReliable (5.47s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  7.0s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (12.07s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  8.6s #peers 1 #RPCs   270 #Ops  221
+--- PASS: TestUnreliableNet (8.60s)
+PASS
+ok  	6.5840/kvsrv1	26.165s
+test loop (13)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+info: linearizability check timed out, assuming history is ok
+  ... Passed --  time 11.0s #peers 1 #RPCs 92581 #Ops 92581
+--- PASS: TestPutConcurrentReliable (11.05s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.8s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (11.85s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  8.0s #peers 1 #RPCs   261 #Ops  216
+--- PASS: TestUnreliableNet (8.00s)
+PASS
+ok  	6.5840/kvsrv1	30.921s
+test loop (14)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  7.4s #peers 1 #RPCs 93811 #Ops 93811
+--- PASS: TestPutConcurrentReliable (7.41s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  7.1s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (12.21s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  8.6s #peers 1 #RPCs   267 #Ops  217
+--- PASS: TestUnreliableNet (8.65s)
+PASS
+ok  	6.5840/kvsrv1	28.282s
+test loop (15)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  3.1s #peers 1 #RPCs 94031 #Ops 94031
+--- PASS: TestPutConcurrentReliable (3.13s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.8s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (11.78s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  7.9s #peers 1 #RPCs   265 #Ops  220
+--- PASS: TestUnreliableNet (7.93s)
+PASS
+ok  	6.5840/kvsrv1	22.847s
+test loop (16)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time 10.0s #peers 1 #RPCs 93667 #Ops 93667
+--- PASS: TestPutConcurrentReliable (9.96s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  7.0s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (12.17s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time 10.8s #peers 1 #RPCs   300 #Ops  230
+--- PASS: TestUnreliableNet (10.75s)
+PASS
+ok  	6.5840/kvsrv1	32.896s
+test loop (17)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  8.7s #peers 1 #RPCs 89613 #Ops 89613
+--- PASS: TestPutConcurrentReliable (8.71s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.9s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (12.17s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time 12.5s #peers 1 #RPCs   319 #Ops  240
+--- PASS: TestUnreliableNet (12.50s)
+PASS
+ok  	6.5840/kvsrv1	33.397s
+test loop (18)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  9.1s #peers 1 #RPCs 94043 #Ops 94043
+--- PASS: TestPutConcurrentReliable (9.11s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  7.0s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (12.28s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time 10.1s #peers 1 #RPCs   287 #Ops  225
+--- PASS: TestUnreliableNet (10.07s)
+PASS
+ok  	6.5840/kvsrv1	31.477s
+test loop (19)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  4.9s #peers 1 #RPCs 92997 #Ops 92997
+--- PASS: TestPutConcurrentReliable (4.88s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.8s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (11.85s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  7.7s #peers 1 #RPCs   264 #Ops  222
+--- PASS: TestUnreliableNet (7.71s)
+PASS
+ok  	6.5840/kvsrv1	24.454s
+test loop (20)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  7.8s #peers 1 #RPCs 93067 #Ops 93067
+--- PASS: TestPutConcurrentReliable (7.78s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  7.2s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (12.54s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time 10.2s #peers 1 #RPCs   288 #Ops  224
+--- PASS: TestUnreliableNet (10.19s)
+PASS
+ok  	6.5840/kvsrv1	30.527s
+test loop (21)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  6.0s #peers 1 #RPCs 94249 #Ops 94249
+--- PASS: TestPutConcurrentReliable (6.04s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  7.0s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (12.29s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  9.9s #peers 1 #RPCs   283 #Ops  224
+--- PASS: TestUnreliableNet (9.85s)
+PASS
+ok  	6.5840/kvsrv1	28.199s
+test loop (22)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  6.0s #peers 1 #RPCs 93119 #Ops 93119
+--- PASS: TestPutConcurrentReliable (6.01s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.9s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (11.80s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time 10.6s #peers 1 #RPCs   294 #Ops  230
+--- PASS: TestUnreliableNet (10.64s)
+PASS
+ok  	6.5840/kvsrv1	28.457s
+test loop (23)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  7.6s #peers 1 #RPCs 93819 #Ops 93819
+--- PASS: TestPutConcurrentReliable (7.63s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.9s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (12.06s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  8.0s #peers 1 #RPCs   259 #Ops  216
+--- PASS: TestUnreliableNet (7.98s)
+PASS
+ok  	6.5840/kvsrv1	27.693s
+test loop (24)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  6.5s #peers 1 #RPCs 95135 #Ops 95135
+--- PASS: TestPutConcurrentReliable (6.48s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  7.0s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (12.23s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  8.8s #peers 1 #RPCs   274 #Ops  223
+--- PASS: TestUnreliableNet (8.80s)
+PASS
+ok  	6.5840/kvsrv1	27.528s
+test loop (25)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  3.2s #peers 1 #RPCs 93975 #Ops 93975
+--- PASS: TestPutConcurrentReliable (3.24s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.8s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (11.90s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  8.8s #peers 1 #RPCs   272 #Ops  223
+--- PASS: TestUnreliableNet (8.84s)
+PASS
+ok  	6.5840/kvsrv1	24.002s
+test loop (26)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  5.9s #peers 1 #RPCs 96073 #Ops 96073
+--- PASS: TestPutConcurrentReliable (5.89s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  7.0s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (12.05s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  9.3s #peers 1 #RPCs   278 #Ops  222
+--- PASS: TestUnreliableNet (9.26s)
+PASS
+ok  	6.5840/kvsrv1	27.217s
+test loop (27)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  6.6s #peers 1 #RPCs 95475 #Ops 95475
+--- PASS: TestPutConcurrentReliable (6.62s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.9s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (12.01s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time 11.2s #peers 1 #RPCs   304 #Ops  235
+--- PASS: TestUnreliableNet (11.19s)
+PASS
+ok  	6.5840/kvsrv1	29.844s
+test loop (28)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  6.0s #peers 1 #RPCs 95185 #Ops 95185
+--- PASS: TestPutConcurrentReliable (6.00s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.9s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (12.01s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  9.2s #peers 1 #RPCs   274 #Ops  222
+--- PASS: TestUnreliableNet (9.20s)
+PASS
+ok  	6.5840/kvsrv1	27.235s
+test loop (29)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  4.6s #peers 1 #RPCs 95687 #Ops 95687
+--- PASS: TestPutConcurrentReliable (4.61s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.8s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (11.97s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  9.0s #peers 1 #RPCs   271 #Ops  218
+--- PASS: TestUnreliableNet (9.02s)
+PASS
+ok  	6.5840/kvsrv1	25.624s
+test loop (30)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  7.9s #peers 1 #RPCs 95195 #Ops 95195
+--- PASS: TestPutConcurrentReliable (7.88s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  7.1s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (12.35s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  7.6s #peers 1 #RPCs   253 #Ops  214
+--- PASS: TestUnreliableNet (7.58s)
+PASS
+ok  	6.5840/kvsrv1	27.827s
+test loop (31)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  6.2s #peers 1 #RPCs 94869 #Ops 94869
+--- PASS: TestPutConcurrentReliable (6.24s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.8s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (11.91s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  9.6s #peers 1 #RPCs   285 #Ops  227
+--- PASS: TestUnreliableNet (9.64s)
+PASS
+ok  	6.5840/kvsrv1	27.809s
+test loop (32)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  8.3s #peers 1 #RPCs 96261 #Ops 96261
+--- PASS: TestPutConcurrentReliable (8.28s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  7.1s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (12.33s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  8.8s #peers 1 #RPCs   272 #Ops  221
+--- PASS: TestUnreliableNet (8.84s)
+PASS
+ok  	6.5840/kvsrv1	29.479s
+test loop (33)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  7.4s #peers 1 #RPCs 95559 #Ops 95559
+--- PASS: TestPutConcurrentReliable (7.39s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.9s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (11.99s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  8.6s #peers 1 #RPCs   269 #Ops  219
+--- PASS: TestUnreliableNet (8.58s)
+PASS
+ok  	6.5840/kvsrv1	27.991s
+test loop (34)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  7.7s #peers 1 #RPCs 95703 #Ops 95703
+--- PASS: TestPutConcurrentReliable (7.72s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.9s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (11.89s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  9.5s #peers 1 #RPCs   286 #Ops  230
+--- PASS: TestUnreliableNet (9.54s)
+PASS
+ok  	6.5840/kvsrv1	29.165s
+test loop (35)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  6.4s #peers 1 #RPCs 94815 #Ops 94815
+--- PASS: TestPutConcurrentReliable (6.44s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.9s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (12.02s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  9.1s #peers 1 #RPCs   272 #Ops  219
+--- PASS: TestUnreliableNet (9.10s)
+PASS
+ok  	6.5840/kvsrv1	27.586s
+test loop (36)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time 10.7s #peers 1 #RPCs 97013 #Ops 97013
+--- PASS: TestPutConcurrentReliable (10.65s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.9s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (11.94s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  9.0s #peers 1 #RPCs   268 #Ops  219
+--- PASS: TestUnreliableNet (9.01s)
+PASS
+ok  	6.5840/kvsrv1	31.622s
+test loop (37)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  4.4s #peers 1 #RPCs 95703 #Ops 95703
+--- PASS: TestPutConcurrentReliable (4.39s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.9s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (11.75s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  8.1s #peers 1 #RPCs   267 #Ops  222
+--- PASS: TestUnreliableNet (8.14s)
+PASS
+ok  	6.5840/kvsrv1	24.298s
+test loop (38)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+info: linearizability check timed out, assuming history is ok
+  ... Passed --  time 11.0s #peers 1 #RPCs 95827 #Ops 95827
+--- PASS: TestPutConcurrentReliable (11.04s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.8s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (11.64s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time 10.3s #peers 1 #RPCs   287 #Ops  224
+--- PASS: TestUnreliableNet (10.32s)
+PASS
+ok  	6.5840/kvsrv1	33.010s
+test loop (39)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  8.3s #peers 1 #RPCs 94795 #Ops 94795
+--- PASS: TestPutConcurrentReliable (8.35s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.9s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (11.99s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time 10.1s #peers 1 #RPCs   294 #Ops  232
+--- PASS: TestUnreliableNet (10.06s)
+PASS
+ok  	6.5840/kvsrv1	30.415s
+test loop (40)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  6.8s #peers 1 #RPCs 95969 #Ops 95969
+--- PASS: TestPutConcurrentReliable (6.84s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.8s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (11.75s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time 10.2s #peers 1 #RPCs   286 #Ops  224
+--- PASS: TestUnreliableNet (10.25s)
+PASS
+ok  	6.5840/kvsrv1	28.857s
+test loop (41)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  8.7s #peers 1 #RPCs 95715 #Ops 95715
+--- PASS: TestPutConcurrentReliable (8.68s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.8s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (11.64s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  8.9s #peers 1 #RPCs   276 #Ops  225
+--- PASS: TestUnreliableNet (8.92s)
+PASS
+ok  	6.5840/kvsrv1	29.259s
+test loop (42)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  8.8s #peers 1 #RPCs 95733 #Ops 95733
+--- PASS: TestPutConcurrentReliable (8.83s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  7.0s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (12.37s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  8.1s #peers 1 #RPCs   265 #Ops  221
+--- PASS: TestUnreliableNet (8.07s)
+PASS
+ok  	6.5840/kvsrv1	29.295s
+test loop (43)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  8.8s #peers 1 #RPCs 95695 #Ops 95695
+--- PASS: TestPutConcurrentReliable (8.81s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  7.0s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (12.18s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  9.6s #peers 1 #RPCs   282 #Ops  228
+--- PASS: TestUnreliableNet (9.64s)
+PASS
+ok  	6.5840/kvsrv1	30.651s
+test loop (44)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  8.4s #peers 1 #RPCs 95723 #Ops 95723
+--- PASS: TestPutConcurrentReliable (8.40s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.8s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (11.67s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  8.2s #peers 1 #RPCs   268 #Ops  223
+--- PASS: TestUnreliableNet (8.16s)
+PASS
+ok  	6.5840/kvsrv1	28.235s
+test loop (45)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  4.4s #peers 1 #RPCs 95613 #Ops 95613
+--- PASS: TestPutConcurrentReliable (4.44s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.9s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (11.83s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  8.8s #peers 1 #RPCs   278 #Ops  228
+--- PASS: TestUnreliableNet (8.83s)
+PASS
+ok  	6.5840/kvsrv1	25.122s
+test loop (46)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  6.3s #peers 1 #RPCs 96305 #Ops 96305
+--- PASS: TestPutConcurrentReliable (6.34s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.8s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (11.96s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  9.9s #peers 1 #RPCs   281 #Ops  222
+--- PASS: TestUnreliableNet (9.94s)
+PASS
+ok  	6.5840/kvsrv1	28.256s
+test loop (47)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  5.9s #peers 1 #RPCs 95705 #Ops 95705
+--- PASS: TestPutConcurrentReliable (5.93s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.9s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (12.00s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  9.0s #peers 1 #RPCs   277 #Ops  226
+--- PASS: TestUnreliableNet (9.01s)
+PASS
+ok  	6.5840/kvsrv1	26.958s
+test loop (48)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  8.5s #peers 1 #RPCs 96111 #Ops 96111
+--- PASS: TestPutConcurrentReliable (8.55s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.9s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (11.97s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  8.0s #peers 1 #RPCs   259 #Ops  215
+--- PASS: TestUnreliableNet (8.05s)
+PASS
+ok  	6.5840/kvsrv1	28.589s
+test loop (49)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  6.3s #peers 1 #RPCs 95193 #Ops 95193
+--- PASS: TestPutConcurrentReliable (6.34s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.9s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (12.00s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  8.4s #peers 1 #RPCs   266 #Ops  220
+--- PASS: TestUnreliableNet (8.39s)
+PASS
+ok  	6.5840/kvsrv1	26.744s
+test loop (50)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  5.0s #peers 1 #RPCs 95657 #Ops 95657
+--- PASS: TestPutConcurrentReliable (5.04s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.7s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (11.62s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  7.9s #peers 1 #RPCs   261 #Ops  220
+--- PASS: TestUnreliableNet (7.87s)
+PASS
+ok  	6.5840/kvsrv1	24.554s
+test loop (51)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  8.6s #peers 1 #RPCs 96517 #Ops 96517
+--- PASS: TestPutConcurrentReliable (8.60s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.9s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (12.08s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  9.3s #peers 1 #RPCs   284 #Ops  231
+--- PASS: TestUnreliableNet (9.33s)
+PASS
+ok  	6.5840/kvsrv1	30.024s
+test loop (52)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  6.2s #peers 1 #RPCs 95709 #Ops 95709
+--- PASS: TestPutConcurrentReliable (6.21s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.8s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (11.66s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  6.9s #peers 1 #RPCs   246 #Ops  212
+--- PASS: TestUnreliableNet (6.91s)
+PASS
+ok  	6.5840/kvsrv1	24.789s
+test loop (53)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  5.9s #peers 1 #RPCs 96359 #Ops 96359
+--- PASS: TestPutConcurrentReliable (5.92s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.9s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (11.90s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  9.0s #peers 1 #RPCs   273 #Ops  222
+--- PASS: TestUnreliableNet (8.99s)
+PASS
+ok  	6.5840/kvsrv1	26.819s
+test loop (54)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  9.8s #peers 1 #RPCs 95723 #Ops 95723
+--- PASS: TestPutConcurrentReliable (9.82s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  7.2s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (12.37s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time 12.2s #peers 1 #RPCs   314 #Ops  235
+--- PASS: TestUnreliableNet (12.21s)
+PASS
+ok  	6.5840/kvsrv1	34.428s
+test loop (55)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  8.7s #peers 1 #RPCs 95625 #Ops 95625
+--- PASS: TestPutConcurrentReliable (8.71s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.8s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (11.68s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  8.9s #peers 1 #RPCs   270 #Ops  221
+--- PASS: TestUnreliableNet (8.93s)
+PASS
+ok  	6.5840/kvsrv1	29.340s
+test loop (56)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+info: linearizability check timed out, assuming history is ok
+  ... Passed --  time 11.0s #peers 1 #RPCs 96075 #Ops 96075
+--- PASS: TestPutConcurrentReliable (11.04s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  7.2s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (12.35s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  9.1s #peers 1 #RPCs   277 #Ops  226
+--- PASS: TestUnreliableNet (9.12s)
+PASS
+ok  	6.5840/kvsrv1	32.535s
+test loop (57)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  4.0s #peers 1 #RPCs 94839 #Ops 94839
+--- PASS: TestPutConcurrentReliable (3.97s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.9s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (12.11s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  9.8s #peers 1 #RPCs   282 #Ops  223
+--- PASS: TestUnreliableNet (9.84s)
+PASS
+ok  	6.5840/kvsrv1	25.944s
+test loop (58)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+info: linearizability check timed out, assuming history is ok
+  ... Passed --  time 11.1s #peers 1 #RPCs 95715 #Ops 95715
+--- PASS: TestPutConcurrentReliable (11.09s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.9s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (11.69s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  9.0s #peers 1 #RPCs   275 #Ops  222
+--- PASS: TestUnreliableNet (9.03s)
+PASS
+ok  	6.5840/kvsrv1	31.820s
+test loop (59)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  6.6s #peers 1 #RPCs 95715 #Ops 95715
+--- PASS: TestPutConcurrentReliable (6.60s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.8s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (11.88s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  9.9s #peers 1 #RPCs   283 #Ops  223
+--- PASS: TestUnreliableNet (9.88s)
+PASS
+ok  	6.5840/kvsrv1	28.374s
+test loop (60)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  7.7s #peers 1 #RPCs 96151 #Ops 96151
+--- PASS: TestPutConcurrentReliable (7.67s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.8s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (11.74s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  8.7s #peers 1 #RPCs   268 #Ops  220
+--- PASS: TestUnreliableNet (8.66s)
+PASS
+ok  	6.5840/kvsrv1	28.100s
+test loop (61)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  8.3s #peers 1 #RPCs 95661 #Ops 95661
+--- PASS: TestPutConcurrentReliable (8.35s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.9s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (11.87s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time 10.0s #peers 1 #RPCs   285 #Ops  226
+--- PASS: TestUnreliableNet (9.95s)
+PASS
+ok  	6.5840/kvsrv1	30.182s
+test loop (62)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  9.8s #peers 1 #RPCs 96235 #Ops 96235
+--- PASS: TestPutConcurrentReliable (9.76s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.7s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (11.67s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  8.3s #peers 1 #RPCs   270 #Ops  224
+--- PASS: TestUnreliableNet (8.27s)
+PASS
+ok  	6.5840/kvsrv1	29.711s
+test loop (63)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time 11.0s #peers 1 #RPCs 95955 #Ops 95955
+--- PASS: TestPutConcurrentReliable (11.03s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.8s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (11.81s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  9.5s #peers 1 #RPCs   287 #Ops  230
+--- PASS: TestUnreliableNet (9.55s)
+PASS
+ok  	6.5840/kvsrv1	32.405s
+test loop (64)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  3.9s #peers 1 #RPCs 96021 #Ops 96021
+--- PASS: TestPutConcurrentReliable (3.95s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.8s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (11.72s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  9.4s #peers 1 #RPCs   277 #Ops  221
+--- PASS: TestUnreliableNet (9.45s)
+PASS
+ok  	6.5840/kvsrv1	25.125s
+test loop (65)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  7.8s #peers 1 #RPCs 95325 #Ops 95325
+--- PASS: TestPutConcurrentReliable (7.77s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.9s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (11.92s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  8.0s #peers 1 #RPCs   263 #Ops  220
+--- PASS: TestUnreliableNet (8.03s)
+PASS
+ok  	6.5840/kvsrv1	27.741s
+test loop (66)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  6.6s #peers 1 #RPCs 96071 #Ops 96071
+--- PASS: TestPutConcurrentReliable (6.61s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.9s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (11.98s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  8.6s #peers 1 #RPCs   271 #Ops  221
+--- PASS: TestUnreliableNet (8.59s)
+PASS
+ok  	6.5840/kvsrv1	27.208s
+test loop (67)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  5.2s #peers 1 #RPCs 96049 #Ops 96049
+--- PASS: TestPutConcurrentReliable (5.22s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.8s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (11.77s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  7.6s #peers 1 #RPCs   256 #Ops  215
+--- PASS: TestUnreliableNet (7.65s)
+PASS
+ok  	6.5840/kvsrv1	24.658s
+test loop (68)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  9.6s #peers 1 #RPCs 93769 #Ops 93769
+--- PASS: TestPutConcurrentReliable (9.61s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  7.0s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (12.27s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  9.0s #peers 1 #RPCs   276 #Ops  224
+--- PASS: TestUnreliableNet (9.03s)
+PASS
+ok  	6.5840/kvsrv1	30.941s
+test loop (69)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+info: linearizability check timed out, assuming history is ok
+  ... Passed --  time 11.1s #peers 1 #RPCs 95575 #Ops 95575
+--- PASS: TestPutConcurrentReliable (11.06s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.8s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (11.72s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  9.0s #peers 1 #RPCs   276 #Ops  225
+--- PASS: TestUnreliableNet (8.98s)
+PASS
+ok  	6.5840/kvsrv1	31.771s
+test loop (70)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  6.1s #peers 1 #RPCs 95717 #Ops 95717
+--- PASS: TestPutConcurrentReliable (6.06s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.8s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (11.73s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  8.0s #peers 1 #RPCs   262 #Ops  220
+--- PASS: TestUnreliableNet (8.01s)
+PASS
+ok  	6.5840/kvsrv1	25.825s
+test loop (71)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  5.1s #peers 1 #RPCs 95723 #Ops 95723
+--- PASS: TestPutConcurrentReliable (5.08s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.8s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (11.69s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  9.4s #peers 1 #RPCs   277 #Ops  221
+--- PASS: TestUnreliableNet (9.40s)
+PASS
+ok  	6.5840/kvsrv1	26.187s
+test loop (72)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  6.5s #peers 1 #RPCs 96199 #Ops 96199
+--- PASS: TestPutConcurrentReliable (6.48s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.9s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (12.26s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time 10.3s #peers 1 #RPCs   293 #Ops  229
+--- PASS: TestUnreliableNet (10.34s)
+PASS
+ok  	6.5840/kvsrv1	29.095s
+test loop (73)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+info: linearizability check timed out, assuming history is ok
+  ... Passed --  time 11.1s #peers 1 #RPCs 95467 #Ops 95467
+--- PASS: TestPutConcurrentReliable (11.06s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.8s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (11.91s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  6.4s #peers 1 #RPCs   247 #Ops  217
+--- PASS: TestUnreliableNet (6.39s)
+PASS
+ok  	6.5840/kvsrv1	29.381s
+test loop (74)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  6.2s #peers 1 #RPCs 95213 #Ops 95213
+--- PASS: TestPutConcurrentReliable (6.21s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.8s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (11.81s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time 10.0s #peers 1 #RPCs   286 #Ops  225
+--- PASS: TestUnreliableNet (10.01s)
+PASS
+ok  	6.5840/kvsrv1	28.046s
+test loop (75)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  6.7s #peers 1 #RPCs 96201 #Ops 96201
+--- PASS: TestPutConcurrentReliable (6.69s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.9s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (12.18s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  9.8s #peers 1 #RPCs   282 #Ops  223
+--- PASS: TestUnreliableNet (9.83s)
+PASS
+ok  	6.5840/kvsrv1	28.709s
+test loop (76)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+info: linearizability check timed out, assuming history is ok
+  ... Passed --  time 11.1s #peers 1 #RPCs 95705 #Ops 95705
+--- PASS: TestPutConcurrentReliable (11.06s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.9s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (12.07s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  9.5s #peers 1 #RPCs   286 #Ops  230
+--- PASS: TestUnreliableNet (9.47s)
+PASS
+ok  	6.5840/kvsrv1	32.622s
+test loop (77)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  9.4s #peers 1 #RPCs 95291 #Ops 95291
+--- PASS: TestPutConcurrentReliable (9.40s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.8s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (11.67s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  7.6s #peers 1 #RPCs   262 #Ops  222
+--- PASS: TestUnreliableNet (7.59s)
+PASS
+ok  	6.5840/kvsrv1	28.663s
+test loop (78)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  8.1s #peers 1 #RPCs 96085 #Ops 96085
+--- PASS: TestPutConcurrentReliable (8.12s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  7.1s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (12.26s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  9.8s #peers 1 #RPCs   285 #Ops  227
+--- PASS: TestUnreliableNet (9.76s)
+PASS
+ok  	6.5840/kvsrv1	30.156s
+test loop (79)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time 11.0s #peers 1 #RPCs 95705 #Ops 95705
+--- PASS: TestPutConcurrentReliable (11.03s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.9s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (11.86s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  7.9s #peers 1 #RPCs   261 #Ops  217
+--- PASS: TestUnreliableNet (7.89s)
+PASS
+ok  	6.5840/kvsrv1	30.798s
+test loop (80)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  6.4s #peers 1 #RPCs 95707 #Ops 95707
+--- PASS: TestPutConcurrentReliable (6.35s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.9s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (12.13s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  7.9s #peers 1 #RPCs   260 #Ops  216
+--- PASS: TestUnreliableNet (7.91s)
+PASS
+ok  	6.5840/kvsrv1	26.413s
+test loop (81)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  5.9s #peers 1 #RPCs 96129 #Ops 96129
+--- PASS: TestPutConcurrentReliable (5.95s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.9s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (12.20s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  7.6s #peers 1 #RPCs   262 #Ops  222
+--- PASS: TestUnreliableNet (7.62s)
+PASS
+ok  	6.5840/kvsrv1	25.796s
+test loop (82)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  7.0s #peers 1 #RPCs 96499 #Ops 96499
+--- PASS: TestPutConcurrentReliable (7.01s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.8s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (11.95s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  8.5s #peers 1 #RPCs   263 #Ops  214
+--- PASS: TestUnreliableNet (8.53s)
+PASS
+ok  	6.5840/kvsrv1	27.511s
+test loop (83)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  9.2s #peers 1 #RPCs 95717 #Ops 95717
+--- PASS: TestPutConcurrentReliable (9.22s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.9s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (12.18s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  8.7s #peers 1 #RPCs   273 #Ops  225
+--- PASS: TestUnreliableNet (8.74s)
+PASS
+ok  	6.5840/kvsrv1	30.165s
+test loop (84)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  4.2s #peers 1 #RPCs 96167 #Ops 96167
+--- PASS: TestPutConcurrentReliable (4.21s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.9s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (11.97s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  9.9s #peers 1 #RPCs   284 #Ops  225
+--- PASS: TestUnreliableNet (9.91s)
+PASS
+ok  	6.5840/kvsrv1	26.105s
+test loop (85)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  9.6s #peers 1 #RPCs 95147 #Ops 95147
+--- PASS: TestPutConcurrentReliable (9.65s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.9s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (12.05s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  7.2s #peers 1 #RPCs   254 #Ops  217
+--- PASS: TestUnreliableNet (7.21s)
+PASS
+ok  	6.5840/kvsrv1	28.931s
+test loop (86)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  4.5s #peers 1 #RPCs 95191 #Ops 95191
+--- PASS: TestPutConcurrentReliable (4.49s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.8s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (11.66s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  8.4s #peers 1 #RPCs   266 #Ops  219
+--- PASS: TestUnreliableNet (8.38s)
+PASS
+ok  	6.5840/kvsrv1	24.542s
+test loop (87)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  9.1s #peers 1 #RPCs 96511 #Ops 96511
+--- PASS: TestPutConcurrentReliable (9.11s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.9s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (12.07s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  9.8s #peers 1 #RPCs   283 #Ops  224
+--- PASS: TestUnreliableNet (9.81s)
+PASS
+ok  	6.5840/kvsrv1	31.010s
+test loop (88)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  7.9s #peers 1 #RPCs 96055 #Ops 96055
+--- PASS: TestPutConcurrentReliable (7.89s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.9s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (12.04s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  9.1s #peers 1 #RPCs   274 #Ops  221
+--- PASS: TestUnreliableNet (9.10s)
+PASS
+ok  	6.5840/kvsrv1	29.043s
+test loop (89)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  6.9s #peers 1 #RPCs 95707 #Ops 95707
+--- PASS: TestPutConcurrentReliable (6.92s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.9s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (12.08s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  7.7s #peers 1 #RPCs   257 #Ops  216
+--- PASS: TestUnreliableNet (7.74s)
+PASS
+ok  	6.5840/kvsrv1	26.757s
+test loop (90)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  8.1s #peers 1 #RPCs 95591 #Ops 95591
+--- PASS: TestPutConcurrentReliable (8.13s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  7.0s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (12.07s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  8.5s #peers 1 #RPCs   267 #Ops  221
+--- PASS: TestUnreliableNet (8.46s)
+PASS
+ok  	6.5840/kvsrv1	28.683s
+test loop (91)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  8.3s #peers 1 #RPCs 96477 #Ops 96477
+--- PASS: TestPutConcurrentReliable (8.33s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.9s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (12.02s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time 11.2s #peers 1 #RPCs   300 #Ops  231
+--- PASS: TestUnreliableNet (11.25s)
+PASS
+ok  	6.5840/kvsrv1	31.612s
+test loop (92)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  9.4s #peers 1 #RPCs 95707 #Ops 95707
+--- PASS: TestPutConcurrentReliable (9.40s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  7.1s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (12.33s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time 10.7s #peers 1 #RPCs   301 #Ops  236
+--- PASS: TestUnreliableNet (10.66s)
+PASS
+ok  	6.5840/kvsrv1	32.416s
+test loop (93)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+info: linearizability check timed out, assuming history is ok
+  ... Passed --  time 11.1s #peers 1 #RPCs 95705 #Ops 95705
+--- PASS: TestPutConcurrentReliable (11.05s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  7.0s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (12.27s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  9.2s #peers 1 #RPCs   282 #Ops  228
+--- PASS: TestUnreliableNet (9.23s)
+PASS
+ok  	6.5840/kvsrv1	32.575s
+test loop (94)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  7.7s #peers 1 #RPCs 94841 #Ops 94841
+--- PASS: TestPutConcurrentReliable (7.71s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.9s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (12.07s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time 10.4s #peers 1 #RPCs   290 #Ops  226
+--- PASS: TestUnreliableNet (10.43s)
+PASS
+ok  	6.5840/kvsrv1	30.229s
+test loop (95)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  8.4s #peers 1 #RPCs 95685 #Ops 95685
+--- PASS: TestPutConcurrentReliable (8.43s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.8s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (11.75s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  9.6s #peers 1 #RPCs   283 #Ops  226
+--- PASS: TestUnreliableNet (9.61s)
+PASS
+ok  	6.5840/kvsrv1	29.808s
+test loop (96)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time 11.0s #peers 1 #RPCs 95167 #Ops 95167
+--- PASS: TestPutConcurrentReliable (11.02s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  7.0s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (12.23s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time 11.4s #peers 1 #RPCs   302 #Ops  229
+--- PASS: TestUnreliableNet (11.44s)
+PASS
+ok  	6.5840/kvsrv1	34.714s
+test loop (97)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time 10.2s #peers 1 #RPCs 95497 #Ops 95497
+--- PASS: TestPutConcurrentReliable (10.21s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.8s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (11.71s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  9.7s #peers 1 #RPCs   285 #Ops  226
+--- PASS: TestUnreliableNet (9.66s)
+PASS
+ok  	6.5840/kvsrv1	31.590s
+test loop (98)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  5.3s #peers 1 #RPCs 95929 #Ops 95929
+--- PASS: TestPutConcurrentReliable (5.30s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.8s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (11.86s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  8.1s #peers 1 #RPCs   264 #Ops  220
+--- PASS: TestUnreliableNet (8.10s)
+PASS
+ok  	6.5840/kvsrv1	25.282s
+test loop (99)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  6.8s #peers 1 #RPCs 95727 #Ops 95727
+--- PASS: TestPutConcurrentReliable (6.84s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  6.8s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (11.97s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time 10.4s #peers 1 #RPCs   289 #Ops  224
+--- PASS: TestUnreliableNet (10.42s)
+PASS
+ok  	6.5840/kvsrv1	29.246s
+test loop (100)
+=== RUN   TestReliablePut
+One client and reliable Put (reliable network)...
+  ... Passed --  time  0.0s #peers 1 #RPCs     5 #Ops    0
+--- PASS: TestReliablePut (0.00s)
+=== RUN   TestPutConcurrentReliable
+Test: many clients racing to put values to the same key (reliable network)...
+  ... Passed --  time  4.6s #peers 1 #RPCs 96015 #Ops 96015
+--- PASS: TestPutConcurrentReliable (4.63s)
+=== RUN   TestMemPutManyClientsReliable
+Test: memory use many put clients (reliable network)...
+  ... Passed --  time  7.0s #peers 1 #RPCs 100000 #Ops    0
+--- PASS: TestMemPutManyClientsReliable (12.28s)
+=== RUN   TestUnreliableNet
+One client (unreliable network)...
+  ... Passed --  time  9.1s #peers 1 #RPCs   277 #Ops  227
+--- PASS: TestUnreliableNet (9.05s)
+PASS
+ok  	6.5840/kvsrv1	25.981s
