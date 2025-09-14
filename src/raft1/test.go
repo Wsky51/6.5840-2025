@@ -2,7 +2,6 @@ package raft
 
 import (
 	"fmt"
-	"log"
 	//log
 	"math/rand"
 	"sync"
@@ -258,7 +257,6 @@ func (ts *Test) one(cmd any, expectedServers int, retry bool) int {
 			t1 := time.Now()
 			for time.Since(t1).Seconds() < 2 {
 				nd, cmd1 := ts.nCommitted(index)
-				log.Println("index:", index, " nd:",nd, " cmd1:", cmd1, " expectedServers:", expectedServers)
 				if nd > 0 && nd >= expectedServers {
 					// committed
 					if cmd1 == cmd {
