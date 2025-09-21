@@ -9,7 +9,7 @@ package raft
 import (
 	//	"bytes"
 	"math/rand"
-	"sort"
+	// "sort"
 	"sync"
 	"sync/atomic"
 	"time"
@@ -81,15 +81,10 @@ func (rf *Raft) GetRoleStr() string {
 // return currentTerm and whether this server
 // believes it is the leader.
 func (rf *Raft) GetState() (int, bool) {
+	// Your code here (3A).
 	rf.mu.Lock()
 	defer rf.mu.Unlock()
-	var term int
-	var isleader bool
-	term = int(rf.currentTerm)
-	isleader = rf.state == Leader
-
-	// Your code here (3A).
-	return term, isleader
+	return int(rf.currentTerm), rf.state == Leader
 }
 
 // save Raft's persistent state to stable storage,
@@ -215,43 +210,53 @@ func (rf *Raft) AppendEntries(args *AppendEntriesArgs, reply *AppendEntriesReply
 		return
 	}
 
+
+	DebugPretty(dLog, "S%d(%d) 收到 S%d(%d) 的ApdEty, 匹配上", rf.me, rf.currentTerm, args.LeaderId, args.Term)
 	// 3. 到此处，说明PrevLogIndex和PrevLogTerm完全匹配上了
-	for i, _ := range args.Entries {
+	for i, v := range args.Entries {
         idx := args.PrevLogIndex + 1 + i
+		// 跳过那些重复的日志
 		if idx <= len(rf.log) - 1 {
 			// 该条已经存在, 跳过
 			if rf.log[idx].Term == args.Term {
 				continue
 			}
-			// 冲突——删掉从 idx 开始的本地日志（以及之后的所有条目），然后把 leader 的剩余 entries 追加进去。
-			
+			rf.log[idx] = v // 替换成新日志
+		}else{
+			rf.log = append(rf.log, v) // 追加
 		}
     }
-	// 计算全局索引
 	
-	
-	if len(rf.log) > args.PrevLogIndex && rf.log[args.PrevLogIndex].Term == args.PrevLogTerm { // PrevLogIndex有日志，且term相同, 说明完全匹配上了
-		// 是老的日志复制消息，直接修改对应下标
-		if args.PrevLogIndex+len(args.Entries) < len(rf.log) {
-			for index, value := range args.Entries {
-				rf.log[args.PrevLogIndex+index+1] = value
-			}
-		} else {
-			rf.log = rf.log[:args.PrevLogIndex+1]
-			rf.log = append(rf.log, args.Entries...)
-		}
-		reply.Success = true
-		if args.LeaderCommit > rf.commitIndex {
-			rf.commitIndex = min(args.LeaderCommit, args.PrevLogIndex)
-		}
-	} else {
-		// 如果日志匹配失败，删除多余的日志
-		if args.PrevLogIndex >= 0 && args.PrevLogIndex <= len(rf.log) {
-			rf.log = rf.log[:args.PrevLogIndex]
-		}
-		DebugPretty(dHeart, "S%d <- (rpc)S%d AppendEntries，日志匹配失败，回退日志", rf.me, args.LeaderId)
-		reply.Success = false
+	// 4. 更新 commitIndex 与应用（apply）
+	lastNewIndex := args.PrevLogIndex + len(args.Entries)
+	newCommit := min(args.LeaderCommit, lastNewIndex)
+	if newCommit > rf.commitIndex {
+		rf.commitIndex = newCommit
 	}
+	
+	
+	// if len(rf.log) > args.PrevLogIndex && rf.log[args.PrevLogIndex].Term == args.PrevLogTerm { // PrevLogIndex有日志，且term相同, 说明完全匹配上了
+	// 	// 是老的日志复制消息，直接修改对应下标
+	// 	if args.PrevLogIndex+len(args.Entries) < len(rf.log) {
+	// 		for index, value := range args.Entries {
+	// 			rf.log[args.PrevLogIndex+index+1] = value
+	// 		}
+	// 	} else {
+	// 		rf.log = rf.log[:args.PrevLogIndex+1]
+	// 		rf.log = append(rf.log, args.Entries...)
+	// 	}
+	// 	reply.Success = true
+	// 	if args.LeaderCommit > rf.commitIndex {
+	// 		rf.commitIndex = min(args.LeaderCommit, args.PrevLogIndex)
+	// 	}
+	// } else {
+	// 	// 如果日志匹配失败，删除多余的日志
+	// 	if args.PrevLogIndex >= 0 && args.PrevLogIndex <= len(rf.log) {
+	// 		rf.log = rf.log[:args.PrevLogIndex]
+	// 	}
+	// 	DebugPretty(dHeart, "S%d <- (rpc)S%d AppendEntries，日志匹配失败，回退日志", rf.me, args.LeaderId)
+	// 	reply.Success = false
+	// }
 
 	reply.Success = true
 }
@@ -355,45 +360,117 @@ func (rf *Raft) makeAppendEntries(server int) (AppendEntriesArgs, AppendEntriesR
 	return args, AppendEntriesReply{}
 }
 
-// 避免不可靠网络的影响，不断发送AppendEntries直到成功
-func (rf *Raft) sendAppendEntriesUntilOk(server int, args *AppendEntriesArgs, reply *AppendEntriesReply) {
-	for {
-		if rf.killed() || rf.state != Leader {
+// // 避免不可靠网络的影响，不断发送AppendEntries直到成功
+// func (rf *Raft) sendAppendEntriesUntilOk(server int, args *AppendEntriesArgs, reply *AppendEntriesReply) {
+// 	for {
+// 		if rf.killed() || rf.state != Leader {
+// 			return
+// 		}
+// 		ok := rf.sendAppendEntries(server, args, reply)
+// 		if ok {
+// 			if reply.Success { // 日志复制成功
+// 				rf.nextIndex[server] = args.PrevLogIndex + len(args.Entries) + 1
+// 				rf.matchIndex[server] = rf.nextIndex[server] - 1
+
+// 				// 判断是否需要更新commit
+// 				numsCopy := make([]int, len(rf.matchIndex))
+// 				copy(numsCopy, rf.matchIndex[:])
+// 				sort.Ints(numsCopy)
+// 				rf.commitIndex = numsCopy[(len(numsCopy)+1)/2]
+
+// 				return
+// 			} else {
+// 				if reply.Term > rf.currentTerm { // 日志复制失败的原因是任期落后
+// 					rf.becomeFollwer()
+// 					return
+// 				} else { // 日志复制失败的原因是日志冲突, 则不断降低PrevLogIndex, PrevLogTerm
+// 					rf.mu.Lock()
+// 					rf.nextIndex[server]--
+// 					rf.mu.Unlock()
+// 					*args, *reply = rf.makeAppendEntries(server)
+// 					args.Entries = rf.log[args.PrevLogIndex+1:]
+// 					continue
+// 				}
+// 			}
+// 		}
+// 		// pause for a random amount of time between 50 and 350
+// 		// milliseconds.
+// 		ms := 50 + (rand.Int63() % 300)
+// 		time.Sleep(time.Duration(ms) * time.Millisecond)
+// 	}
+// }
+
+func (rf *Raft) replicateToPeer(serverId int) {
+	rf.mu.Lock()
+	if rf.killed() || rf.state != Leader {
+		rf.mu.Unlock()
+		return
+	}
+	args, reply := rf.makeAppendEntries(serverId)
+	args.Entries = rf.log[args.PrevLogIndex + 1:]
+	rf.mu.Unlock()
+	
+	ok := rf.sendAppendEntries(serverId, &args, &reply)
+
+	rf.mu.Lock()
+	defer rf.mu.Unlock()
+	if ok {
+		// 1.  reply.Term > currentTerm，说明响应来自一个更新的任期。领导者会立即承认自己过时, 转为follower；如果 reply.Term < currentTerm，这是一个陈旧的响应，可以直接忽略
+		if reply.Term > rf.currentTerm { // 如果其他节点的任期更大，则回退成为follwer
+			DebugPretty(dLog, "S%d(%d) 任期没 S%d(%d)大，回退成为flw",rf.me, rf.currentTerm, serverId, reply.Term)
+			rf.becomeFollwer()
+			rf.votedFor = -1
+			rf.currentTerm = reply.Term
 			return
 		}
-		ok := rf.sendAppendEntries(server, args, reply)
-		if ok {
-			if reply.Success { // 日志复制成功
-				rf.nextIndex[server] = args.PrevLogIndex + len(args.Entries) + 1
-				rf.matchIndex[server] = rf.nextIndex[server] - 1
 
-				// 判断是否需要更新commit
-				numsCopy := make([]int, len(rf.matchIndex))
-				copy(numsCopy, rf.matchIndex[:])
-				sort.Ints(numsCopy)
-				rf.commitIndex = numsCopy[(len(numsCopy)+1)/2]
+		if rf.state != Leader {
+			return
+		}
 
-				return
-			} else {
-				if reply.Term > rf.currentTerm { // 日志复制失败的原因是任期落后
-					rf.becomeFollwer()
-					return
-				} else { // 日志复制失败的原因是日志冲突, 则不断降低PrevLogIndex, PrevLogTerm
-					rf.mu.Lock()
-					rf.nextIndex[server]--
-					rf.mu.Unlock()
-					*args, *reply = rf.makeAppendEntries(server)
-					args.Entries = rf.log[args.PrevLogIndex+1:]
+		// 2. 处理任期相同的日志复制
+		if reply.Success {
+			// 2.1 更新 nextIndex 和 matchIndex：这意味着跟随者成功接收了日志条目。
+			rf.nextIndex[serverId] = args.PrevLogIndex + len(args.Entries) + 1
+			rf.matchIndex[serverId] = args.PrevLogIndex + len(args.Entries)
+			DebugPretty(dLog, "S%d(%d) 已经将日志%v成功复制到%d, rf.nextIdx=%d", rf.me, rf.currentTerm, args, serverId, rf.nextIndex[serverId])
+
+			// 2.2 领导者只能提交当前任期的日志条目，并且是那些已经被大多数节点复制了的条目
+			for j := len(rf.log) - 1; j > rf.commitIndex; j-- {
+				if rf.log[j].Term != rf.currentTerm { // 只能提交本周期内的日志
 					continue
 				}
+				count := 1
+				for k := 0; k < len(rf.matchIndex); k++ {
+					if k != rf.me && rf.matchIndex[k] >= j {
+						count++
+					}
+				}
+				if count > len(rf.matchIndex)/2{ // 只需找到最大即可
+					rf.commitIndex = j
+					DebugPretty(dLog, "S%d(%d) 更新commitIdx=",rf.me, rf.currentTerm, rf.commitIndex)
+					break
+				}
 			}
+		}else{ // 日志不匹配
+			rf.nextIndex[serverId]--
+			if rf.nextIndex[serverId] < 1 {
+				rf.nextIndex[serverId] = 1
+			}
+			DebugPretty(dLog, "S%d(%d) 发送到%d 日志不匹配, 回退器nextIdx",rf.me, rf.currentTerm, serverId, rf.nextIndex[serverId])
+			go rf.replicateToPeer(serverId)
 		}
-		// pause for a random amount of time between 50 and 350
-		// milliseconds.
-		ms := 50 + (rand.Int63() % 300)
-		time.Sleep(time.Duration(ms) * time.Millisecond)
+	}else{
+		DebugPretty(dWarn, "S%d(%d) 发送到%d 消息丢失",rf.me, rf.currentTerm, serverId)
 	}
+}
 
+func (rf *Raft) replicateToAllPeers() {
+	for i := 0; i < len(rf.peers); i++ {
+		if i != rf.me {
+			go rf.replicateToPeer(i)
+		}
+	}
 }
 
 // the service using Raft (e.g. a k/v server) wants to start
@@ -409,37 +486,38 @@ func (rf *Raft) sendAppendEntriesUntilOk(server int, args *AppendEntriesArgs, re
 // term. the third return value is true if this server believes it is
 // the leader.
 func (rf *Raft) Start(command interface{}) (int, int, bool) {
-	index := -1
-	term := -1
-	isLeader := true
-
 	// Your code here (3B).
-	term, isLeader = rf.GetState()
-	if !isLeader {
-		return index, term, isLeader // 不是leader的话直接返回
-	}
-
+	term, isLeader := rf.GetState()
 	rf.mu.Lock()
+	defer rf.mu.Unlock()
+	if !isLeader {
+		return -1, -1, false // 不是leader的话直接返回
+	}
+	DebugPretty(dLog, "S%d(%d) 收到了一条日志: %v", rf.me, rf.currentTerm, command)
 	logEntry := LogEntry{Index: len(rf.log), Term: term, Command: command}
 	rf.log = append(rf.log, logEntry)
-	rf.mu.Unlock()
+	rf.replicateToAllPeers()
+	return logEntry.Index, rf.currentTerm, true
+	
+	// rf.mu.Unlock()
 
-	// 立即向所有节点发送AppendEntries消息
-	for i := 0; i < len(rf.peers); i++ {
-		if i != rf.me {
-			go func(server int) {
-				args, reply := rf.makeAppendEntries(server)
-				// args.Entries = [] LogEntry{logEntry}
-				args.Entries = rf.log[args.PrevLogIndex+1:]
-				if rf.killed() || rf.state != Leader {
-					return
-				}
-				rf.sendAppendEntriesUntilOk(server, &args, &reply)
-			}(i)
-		}
-	}
-	term, isLeader = rf.GetState()
-	return logEntry.Index, term, isLeader
+	// // 立即向所有节点发送AppendEntries消息
+	// for i := 0; i < len(rf.peers); i++ {
+	// 	if i != rf.me {
+	// 		go func(server int) {
+	// 			args, reply := rf.makeAppendEntries(server)
+	// 			// args.Entries = [] LogEntry{logEntry}
+	// 			args.Entries = rf.log[args.PrevLogIndex+1:]
+	// 			if rf.killed() || rf.state != Leader {
+	// 				return
+	// 			}
+	// 			rf.sendAppendEntriesUntilOk(server, &args, &reply)
+	// 		}(i)
+	// 	}
+	// }
+	// term, isLeader = rf.GetState()
+	// return logEntry.Index, term, isLeader
+
 }
 
 // the tester doesn't halt goroutines created by Raft after each test,
@@ -506,8 +584,9 @@ func (rf *Raft) sendHeartBeat() {
 				if ok && !reply.Success && rf.state == Leader  {
 					if rf.currentTerm < reply.Term { // 任期小于follwer，回退成为follwer
 						rf.becomeFollwer()
-						DebugPretty(dLeader, "S%d 当前任期%v小于 S%d 的任期%v, 自身回退成为follwer", rf.me, rf.currentTerm, server, reply.Term)
+						rf.votedFor = -1
 						rf.currentTerm = reply.Term
+						DebugPretty(dLeader, "S%d 当前任期%v小于 S%d 的任期%v, 自身回退成为follwer", rf.me, rf.currentTerm, server, reply.Term)
 					} else { // PrevLogIndex和PrevLogTerm不匹配
 						rf.nextIndex[server]--
 					}
@@ -543,6 +622,7 @@ func (rf *Raft) startElection() {
 					// 2.如果响应中的任期号 T_response 大于候选人自己当前的任期号, 说明候选人已经过时了, 回退为跟随者，并更新自己的currentTerm
 					if reply.Term > rf.currentTerm {
 						rf.becomeFollwer()
+						rf.votedFor = -1
 						rf.currentTerm = reply.Term
 						DebugPretty(dLeader, "S%d 本次选举失败,因为有更大任期,回退为Flw", rf.me)
 						rf.mu.Unlock()
@@ -617,7 +697,7 @@ func (rf *Raft) ticker() {
 func (rf *Raft) initNextAndMatchIndex() {
 	rf.nextIndex = make([]int, len(rf.peers)) // 初始化最后一个日志的index + 1
 	for i := range rf.nextIndex {
-		rf.nextIndex[i] = len(rf.log)
+		rf.nextIndex[i] = len(rf.log) // 初始化都是1
 	}
 
 	rf.matchIndex = make([]int, len(rf.peers)) // 初始化为0
