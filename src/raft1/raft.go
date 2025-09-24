@@ -62,7 +62,11 @@ type Raft struct {
 	electionTimeoutBeginTs int64                 // 开始计算选举超时的时间戳
 	state                  Role                  // 0: follwer, 1: candidate, 2: leader
 	voteCnt                int                   // 获得到的投票数
-	applyCh                chan raftapi.ApplyMsg //和客户端的通信信道
+	applyCh                chan raftapi.ApplyMsg // 和客户端的通信信道
+
+	batchLogCnt			   int					 // 优化项，日志批量处理，从而减少rpc数量
+	apdEtyTimer 		   *time.Timer			 // 发送日志复制和心跳包的timer
+	electionTimeoutTimer   *time.Timer			 // 选举超时的timer
 }
 
 func (rf *Raft) GetRoleStr() string {
@@ -388,6 +392,9 @@ func (rf *Raft) replicateToPeer(serverId int) {
 
 		// 2. 处理任期相同的日志复制
 		if reply.Success {
+			if len(args.Entries) == 0 { // 说明是个心跳包，没必要做检查，减小cpu开销
+				return
+			}
 			// 2.1 更新 nextIndex 和 matchIndex：这意味着跟随者成功接收了日志条目。
 			rf.nextIndex[serverId] = max(args.PrevLogIndex + len(args.Entries) + 1, rf.nextIndex[serverId])
 			rf.matchIndex[serverId] = rf.nextIndex[serverId] - 1
@@ -482,9 +489,15 @@ func (rf *Raft) Start(command interface{}) (int, int, bool) {
 	}
 	
 	logEntry := LogEntry{Index: len(rf.log), Term: term, Command: command}
-	DebugPretty(dLog, "S%d(%d) 收到了一条日志: %v(%v)", rf.me, rf.currentTerm, logEntry.Index ,command)
 	rf.log = append(rf.log, logEntry)
-	rf.replicateToAllPeers()
+	rf.batchLogCnt++
+	if rf.batchLogCnt >= 10 {
+		rf.batchLogCnt = 0
+		rf.replicateToAllPeers()
+	}
+	DebugPretty(dLog, "S%d(%d) 收到了一条日志: %v(%v)", rf.me, rf.currentTerm, logEntry.Index ,command)
+	
+	// rf.replicateToAllPeers()
 	return logEntry.Index, rf.currentTerm, true
 }
 
@@ -499,6 +512,8 @@ func (rf *Raft) Start(command interface{}) (int, int, bool) {
 // should call killed() to check whether it should stop.
 func (rf *Raft) Kill() {
 	atomic.StoreInt32(&rf.dead, 1)
+	rf.apdEtyTimer.Stop()
+	rf.electionTimeoutTimer.Stop()
 	// Your code here, if desired.
 }
 
@@ -508,8 +523,9 @@ func (rf *Raft) killed() bool {
 }
 
 func (rf *Raft) resetTimeout() {
-	rf.electionTimeout = 500 + (rand.Int63() % 500) // 重置超时时间
-	rf.electionTimeoutBeginTs = time.Now().UnixMilli()
+	// rf.electionTimeout = 500 + (rand.Int63() % 500) // 重置超时时间
+	// rf.electionTimeoutBeginTs = time.Now().UnixMilli()
+	rf.electionTimeoutTimer.Reset(time.Duration(500 + (rand.Int63() % 500)) * time.Millisecond) // 重置选举超时时长
 }
 
 func (rf *Raft) becomeFollwer(term int, resetTimeout bool) {
@@ -535,7 +551,8 @@ func (rf *Raft) becomeLeader() {
 	rf.votedFor = rf.me
 	rf.initNextAndMatchIndex()
 	// 成为领导人后立刻发送心跳消息给其他节点
-	rf.sendHeartBeat()
+	rf.replicateToAllPeers()
+	rf.apdEtyTimer.Reset(time.Duration(50 + (rand.Int63() % 300)) * time.Millisecond)
 }
 
 func (rf *Raft) sendHeartBeat() {
@@ -674,25 +691,79 @@ func (rf *Raft) ticker() {
 	for !rf.killed() {
 		// Your code here (3A)
 		// Check if a leader election should be started.
-		now_ms := time.Now().UnixMilli() // 获取当前时间
-		rf.mu.Lock()
-		if rf.state != Leader && now_ms > rf.electionTimeoutBeginTs + rf.electionTimeout { // 发生选举超时
-			DebugPretty(dTimer, "S%d 开始发起选举", rf.me)
-			rf.becomeCandidate()
-			rf.startElection() // 开启新选举
-		}
-		rf.mu.Unlock()
 
-		// pause for a random amount of time between 50 and 350
-		// milliseconds.
-		ms := 50 + (rand.Int63() % 300)
-		time.Sleep(time.Duration(ms) * time.Millisecond)
+		select {
+			case <-rf.electionTimeoutTimer.C:
+				rf.mu.Lock()
+				if rf.state != Leader{
+					DebugPretty(dTimer, "S%d 开始发起选举", rf.me)
+					rf.becomeCandidate()
+					rf.startElection() // 开启新选举
+				}
+				rf.mu.Unlock()
+			case <-rf.apdEtyTimer.C:
+				rf.mu.Lock()
+				if rf.state == Leader{
+					rf.apdEtyTimer.Reset(time.Duration(50 + (rand.Int63() % 300)) * time.Millisecond)
+					rf.batchLogCnt = 0
+					rf.replicateToAllPeers()					
+				}
+				rf.mu.Unlock()
+			// case <- rf.batchLogCh:
+			// 	rf.mu.Lock()
+			// 	rf.batchLogCnt = 0
+			// 	if rf.state == Leader{
+			// 		rf.apdEtyTimer.Reset(time.Duration(50 + (rand.Int63() % 300)) * time.Millisecond)
+			// 		rf.replicateToAllPeers()
+			// 	}
+			// 	rf.mu.Unlock()
 
-		rf.mu.Lock()
-		if rf.state == Leader {
-			rf.sendHeartBeat()
+				// 第一个定时器触发
+				// 可以在这里嵌套switch处理更复杂的逻辑
+				// switch count % 2 {
+				// case 0:
+				// 	fmt.Printf("定时器1触发 - 偶数次 | 时间: %v | 计数: %d\n", t.Format("15:04:05.000"), count)
+				// case 1:
+				// 	fmt.Printf("定时器1触发 - 奇数次 | 时间: %v | 计数: %d\n", t.Format("15:04:05.000"), count)
+				// }
+				// // 重置定时器1，让它再次在1秒后触发
+				// timer1.Reset(1 * time.Second)
+				// count++
+
+			// case t := <-timer2.C:
+			// 	// 第二个定时器触发
+			// 	fmt.Printf("=== 定时器2触发 | 时间: %v | 计数: %d ===\n", t.Format("15:04:05.000"), count)
+			// 	// 重置定时器2，让它再次在2秒后触发
+			// 	timer2.Reset(2 * time.Second)
+
+			// 	// 当计数达到5时，触发退出
+			// 	if count >= 5 {
+			// 		done <- true
+			// 		return
+			// 	}
 		}
-		rf.mu.Unlock()
+
+
+		// now_ms := time.Now().UnixMilli() // 获取当前时间
+		// rf.mu.Lock()
+		// // rf.apdEtyTimer = time.NewTimer(12)
+		// if rf.state != Leader && now_ms > rf.electionTimeoutBeginTs + rf.electionTimeout { // 发生选举超时
+		// 	DebugPretty(dTimer, "S%d 开始发起选举", rf.me)
+		// 	rf.becomeCandidate()
+		// 	rf.startElection() // 开启新选举
+		// }
+		// rf.mu.Unlock()
+
+		// // pause for a random amount of time between 50 and 350
+		// // milliseconds.
+		// ms := 50 + (rand.Int63() % 300)
+		// time.Sleep(time.Duration(ms) * time.Millisecond)
+
+		// rf.mu.Lock()
+		// if rf.state == Leader {
+		// 	rf.sendHeartBeat()
+		// }
+		// rf.mu.Unlock()
 		
 	}
 }
@@ -739,6 +810,11 @@ func Make(peers []*labrpc.ClientEnd, me int,
 	rf.state = Follower
 	rf.voteCnt = 0
 	rf.applyCh = applyCh
+	
+
+	rf.electionTimeoutTimer = time.NewTimer(time.Duration(500 + (rand.Int63() % 500)) * time.Millisecond) // 选举超时器
+	rf.apdEtyTimer = time.NewTimer(time.Duration(50 + (rand.Int63() % 300)) * time.Millisecond) // 心跳和日志复制定时器
+	rf.batchLogCnt = 0
 
 	// initialize from state persisted before a crash
 	rf.readPersist(persister.ReadRaftState())
