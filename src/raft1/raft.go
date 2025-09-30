@@ -234,13 +234,16 @@ func (rf *Raft) AppendEntries(args *AppendEntriesArgs, reply *AppendEntriesReply
         idx := args.PrevLogIndex + 1 + i
 		// 跳过那些重复的日志
 		if idx <= len(rf.log) - 1 {
-			// 该条已经存在, 跳过
-			if rf.log[idx].Term == args.Term {
-				continue
+			if rf.log[idx].Term != v.Term {
+				// 截断本地日志并追加新日志
+				rf.log = rf.log[:idx]
+				rf.log = append(rf.log, args.Entries[i:]...)
+				rf.persist()
+				break
 			}
-			rf.log[idx] = v // 替换成新日志
-		}else{
-			rf.log = append(rf.log, v) // 追加
+			// term一致则跳过
+		} else {
+			rf.log = append(rf.log, v)
 			rf.persist()
 		}
     }
