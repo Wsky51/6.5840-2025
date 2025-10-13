@@ -65,6 +65,11 @@ type Raft struct {
 	state                  Role                  // 0: follwer, 1: candidate, 2: leader
 	voteCnt                int                   // 获得到的投票数
 	applyCh                chan raftapi.ApplyMsg //和客户端的通信信道
+
+	//snapshot
+	lastIncludedIndex int // 日志压缩
+	lastIncludedTerm int // 日志压缩
+	
 }
 
 func (rf *Raft) GetRoleStr() string {
@@ -89,6 +94,20 @@ func (rf *Raft) GetState() (int, bool) {
 	return int(rf.currentTerm), rf.state == Leader
 }
 
+func (rf *Raft) persistState() []byte {
+	w := new(bytes.Buffer)
+	e := labgob.NewEncoder(w)
+
+    e.Encode(rf.currentTerm)
+    e.Encode(rf.votedFor)
+	e.Encode(rf.lastIncludedIndex)
+	e.Encode(rf.lastIncludedTerm)
+    e.Encode(rf.log)
+
+    data := w.Bytes()
+    return data
+}
+
 // save Raft's persistent state to stable storage,
 // where it can later be retrieved after a crash and restart.
 // see paper's Figure 2 for a description of what should be persistent.
@@ -97,15 +116,7 @@ func (rf *Raft) GetState() (int, bool) {
 // after you've implemented snapshots, pass the current snapshot
 // (or nil if there's not yet a snapshot).
 func (rf *Raft) persist() {
-	// Your code here (3C).
-	w := new(bytes.Buffer)
-	e := labgob.NewEncoder(w)
-	e.Encode(rf.currentTerm)
-	e.Encode(rf.votedFor)
-	e.Encode(rf.log)
-	DebugPretty(dPersist, "S%d persist ecode happend, term:%d, votedFor:%d", rf.me, rf.currentTerm, rf.votedFor)
-	
-	raftstate := w.Bytes()
+	raftstate := rf.persistState()
 	rf.persister.Save(raftstate, nil)
 }
 
@@ -119,8 +130,10 @@ func (rf *Raft) readPersist(data []byte) {
 	d := labgob.NewDecoder(r)
 	var currentTerm int
 	var votedFor int
+	var lastIncludedIndex int
+	var lastIncludedTerm int
 	var logs []LogEntry
-	if d.Decode(&currentTerm) != nil || d.Decode(&votedFor) != nil || d.Decode(&logs)  != nil {
+	if d.Decode(&currentTerm) != nil || d.Decode(&votedFor) != nil || d.Decode(&lastIncludedIndex)  != nil || d.Decode(&lastIncludedTerm)  != nil || d.Decode(&logs)  != nil  {
 		DebugPretty(dError, "S%d decode error happend", rf.me)
 	}else{
 		rf.currentTerm = currentTerm
@@ -143,6 +156,7 @@ func (rf *Raft) PersistBytes() int {
 // that index. Raft should now trim its log as much as possible.
 func (rf *Raft) Snapshot(index int, snapshot []byte) {
 	// Your code here (3D).
+	DebugPretty(dSnap, "S%d snapshot idx:%d, log:%v, snapshot:%v", rf.me, rf.log, snapshot)
 }
 
 type AppendEntriesArgs struct {
@@ -177,6 +191,20 @@ type RequestVoteReply struct {
 	// Your data here (3A).
 	Term        int
 	VoteGranted bool
+}
+
+type InstallSnapshotArgs struct {
+	Term int
+	LeaderId int
+	LastIncludedIndex int
+	LastIncludedTerm int
+	Offset int
+	Data []byte
+	Done bool
+}
+
+type InstallSnapshotReply struct {
+	Term int
 }
 
 func (rf *Raft) AppendEntries(args *AppendEntriesArgs, reply *AppendEntriesReply) {
@@ -751,6 +779,8 @@ func Make(peers []*labrpc.ClientEnd, me int,
 	rf.state = Follower
 	rf.voteCnt = 0
 	rf.applyCh = applyCh
+	rf.lastIncludedIndex = 0
+	rf.lastIncludedTerm = 0
 
 	// initialize from state persisted before a crash
 	rf.readPersist(persister.ReadRaftState())
